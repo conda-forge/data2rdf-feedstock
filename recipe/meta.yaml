@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - jsonpath-ng >=1.6.1,<1.7.dev0
-    - lru-cache <1
+    - backports.functools_lru_cache <1
     - pydantic >=2,<3
     - pydantic-settings
     - requests
