@@ -8,10 +8,10 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/data2rdf-{{ version }}.tar.gz
   sha256: 2749bd5effbefbea7f4caa17dd84a345ce933c9977da2ecc5c9e03d851728c1d
+  patches:
+    - cache.patch
 
 build:
-  entry_points:
-    - abox_conv = data2rdf.cli.abox_conversion:terminal
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -22,7 +22,6 @@ requirements:
     - pip
   run:
     - jsonpath-ng >=1.6.1,<1.7.dev0
-    - lru-cache <1
     - pydantic >=2,<3
     - pydantic-settings
     - requests
@@ -41,7 +40,6 @@ test:
     - data2rdf
   commands:
     - pip check
-    - abox_conv --help
   requires:
     - pip
 
