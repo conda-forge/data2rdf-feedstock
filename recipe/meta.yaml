@@ -12,8 +12,6 @@ source:
     - cache.patch
 
 build:
-  entry_points:
-    - abox_conv = data2rdf.cli.abox_conversion:terminal
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -42,7 +40,6 @@ test:
     - data2rdf
   commands:
     - pip check
-    - abox_conv --help
   requires:
     - pip
 
