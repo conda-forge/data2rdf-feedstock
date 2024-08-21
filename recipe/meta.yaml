@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/data2rdf-{{ version }}.tar.gz
   sha256: f85919847782c54eb742327462943745a1c72e2a6b0698bdd0ba888e6f55233c
+  patches:
+    - cache.patch
 
 build:
   entry_points:
