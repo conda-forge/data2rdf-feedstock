@@ -1,5 +1,5 @@
 {% set name = "data2rdf" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/data2rdf-{{ version }}.tar.gz
-  sha256: f85919847782c54eb742327462943745a1c72e2a6b0698bdd0ba888e6f55233c
+  sha256: 2749bd5effbefbea7f4caa17dd84a345ce933c9977da2ecc5c9e03d851728c1d
   patches:
     - cache.patch
 
