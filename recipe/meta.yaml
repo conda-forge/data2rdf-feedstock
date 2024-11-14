@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/data2rdf-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/data2rdf-{{ version }}.tar.gz
   sha256: c1b16c0d195d7113574433592fb0d492aa6dbc0b514a6faaa2fbc581a50fbde9
   patches:
     - cache.patch
@@ -22,7 +22,6 @@ requirements:
     - pip
     - setuptools
   run:
-    - lru-cache <1
     - jsonpath-ng >=1.6.1,<1.7.dev0
     - pydantic >=2,<3
     - pydantic-settings
