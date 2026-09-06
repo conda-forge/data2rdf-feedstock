@@ -44,7 +44,9 @@ tests:
       imports:
         - data2rdf
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: A generic pipeline that can be used to map raw data to RDF.
